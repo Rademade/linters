@@ -14,6 +14,10 @@ gem "scss_lint"
 gem "sentry-raven"
 gem "slim_lint"
 
+gem 'capistrano-rvm'
+gem 'capistrano-bundler'
+gem 'capistrano-resque', require: false
+
 group :test, :development do
   gem "awesome_print"
   gem "byebug"
