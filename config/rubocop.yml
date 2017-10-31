@@ -1,2 +1,165 @@
+
+
 AllCops:
   TargetRubyVersion: 2.3
+  Exclude:
+    - 'frontend/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'bin/**/*'
+    - '**/*.erb'
+    - 'db/**/*'
+    - 'db/schema.rb'
+    - 'schema.rb'
+
+Rails:
+  Enabled: true
+
+Metrics/LineLength:
+  Max: 150
+  Exclude:
+    - 'db/schema.rb'
+    - 'db/schema.rb'
+    - 'schema.rb'
+    - 'config/**/*'
+    - '**/*.erb'
+
+Style/EmptyLinesAroundBlockBody:
+  EnforcedStyle: no_empty_lines
+
+Style/EmptyLinesAroundClassBody:
+  EnforcedStyle: empty_lines
+
+Style/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+  Exclude:
+    - 'config/**/*'
+
+Style/Encoding:
+  EnforcedStyle: always
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Metrics/MethodLength:
+  Exclude:
+    - 'db/**/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'spec/**/*.rb'
+    # admin ctrl def can be this big
+    - 'app/controllers/rademade_admin/**/*.rb'
+
+  ExcludedMethods:
+    - 'parameter'
+    - 'And'
+    - 'Then'
+    - 'When'
+    - 'Given'
+    - 'define'
+    - 'factory'
+    - 'included'
+
+Style/RegexpLiteral:
+  AllowInnerSlashes: true
+
+Style/AsciiComments:
+  Enabled: false
+
+Metrics/ClassLength:
+  Description: 'Avoid classes longer than 100 lines of code.'
+  Exclude:
+    - 'app/models/**/*'
+    - 'app/controllers/**/*'
+
+Style/BlockComments:
+  Description: 'Do not use block comments.'
+  Enabled: false
+
+Rails/SaveBang:
+  Enabled: true
+
+Style/Send:
+  Enabled: true
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+Style/MethodCallWithArgsParentheses:
+  Description: 'Use parentheses for method calls with arguments.'
+  Enabled: true
+  Include:
+    - 'app/services/**/*'
+
+Style/ImplicitRuntimeError:
+  Description: >-
+                 Use `raise` or `fail` with an explicit exception class and
+                 message, rather than just a message.
+  Enabled: true
+
+Style/FirstHashElementLineBreak:
+  Description: >-
+                 Checks for a line break before the first element in a
+                 multi-line hash.
+  Enabled: true
+
+Style/FirstArrayElementLineBreak:
+  Description: >-
+                 Checks for a line break before the first element in a
+                 multi-line array.
+  Enabled: true
+
+Rails/SkipsModelValidations:
+  Exclude:
+      - 'db/**/*'
+  Blacklist:
+    - decrement!
+    - decrement_counter
+    - increment!
+    - increment_counter
+    - toggle!
+    - update_attribute
+    - update_column
+    - update_columns
+    - update_counters
+
+# Its buggy, enable when fixed
+Rails/FilePath:
+  Enabled: false
+
+Documentation:
+  Exclude:
+    - 'app/controllers/**/*'
+    - 'app/models/**/*'
+    - 'app/mailers/**/*'
+    - 'app/uploaders/**/*'
+    - 'app/jobs/**/*'
+    - 'config/**/*'
+    - 'db/*/**'
+
+Style/OptionalArguments:
+  Exclude:
+    - 'features/**/*'
+
+Style/GuardClause:
+  Description: 'Check for conditionals that can be replaced with guard clauses'
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Description: >-
+                 Favor modifier if/unless usage when you have a
+                 single-line body.
+  StyleGuide: '#if-as-a-modifier'
+  Enabled: false
