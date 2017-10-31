@@ -18,9 +18,9 @@ gem 'capistrano-rvm'
 gem 'capistrano-bundler'
 gem 'capistrano-resque', require: false
 
-group :test, :development do
-  gem "awesome_print"
-  gem "byebug"
-  gem "dotenv"
-  gem "rspec"
-end
+# group :test, :development do
+#   gem "awesome_print"
+#   gem "byebug"
+#   gem "dotenv"
+#   gem "rspec"
+# end

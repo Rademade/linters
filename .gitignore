@@ -3,3 +3,4 @@ _build
 deps
 yarn-debug.log*
 yarn-error.log*
+log/
